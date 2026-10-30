@@ -751,15 +751,56 @@ img, svg { display: block; }
   .nav__link--cta { margin-left: 0; text-align: center; }
   .nav-toggle { display: flex; }
   .hero { padding: 124px 0 70px; }
-  .logo__img { height: 46px; }
+  .logo__img { height: 62px; }
   .section { padding: 72px 0; }
+}
+
+/* ===== Celular ===== */
+@media (max-width: 600px) {
+  .container { padding: 0 18px; }
+
+  /* texto e botões primeiro; logo grande vem logo abaixo */
+  .hero { padding: 108px 0 56px; }
+  .hero__inner { gap: 36px; }
+  .hero__visual { order: 0; }
+  .hero__content { text-align: center; }
+  .hero__subtitle { margin-inline: auto; font-size: 1.02rem; }
+  .hero__actions { justify-content: center; flex-direction: column; }
+  .hero__actions .btn { width: 100%; }
+  .badge { font-size: 0.8rem; margin-bottom: 18px; }
+
+  /* órbita cabe na tela, sem vazar */
+  .orbit { width: min(100%, 300px); height: auto; aspect-ratio: 1; }
+  .orbit__ring--2 { inset: 38px; }
+  .orbit__logo { width: 72%; height: 72%; }
+  .chip { padding: 8px 12px; font-size: 0.78rem; border-radius: 11px; }
+  .chip--1 { top: 0; left: 0; }
+  .chip--2 { top: 14px; right: 0; }
+  .chip--3 { bottom: 34px; left: 0; }
+  .chip--4 { bottom: 6px; right: 0; }
+
+  .section { padding: 60px 0; }
+  .section__head { margin-bottom: 38px; }
+
+  .card, .contact__form { padding: 24px; }
+  .contact__inner { gap: 36px; }
+  .contact__info { text-align: center; }
+  .contact__list li { text-align: left; }
+  .btn--whatsapp { width: 100%; }
+
+  /* campos com tamanho de toque confortável; 16px evita zoom automático no iPhone */
+  .field input, .field select, .field textarea { font-size: 16px; padding: 14px 15px; }
+
+  .footer__inner { flex-direction: column; align-items: center; text-align: center; }
+  .footer__nav { justify-content: center; }
+
+  .whatsapp-float { width: 54px; height: 54px; bottom: 16px; right: 16px; }
 }
 
 @media (max-width: 480px) {
   .cards { grid-template-columns: 1fr; }
   .features { grid-template-columns: 1fr; }
   .steps { grid-template-columns: 1fr; }
-  .hero__actions .btn { flex: 1; }
 }
 
 /* ===== Acessibilidade: reduzir movimento ===== */
