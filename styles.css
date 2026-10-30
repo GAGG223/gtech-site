@@ -743,10 +743,20 @@ img, svg { display: block; }
     background: rgba(8, 10, 26, 0.97);
     backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
-    transform: translateY(-120%);
-    transition: transform 0.3s var(--ease);
+    /* fechado: some por completo (antes a ponta do painel cobria a logo) */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-16px);
+    transition: transform 0.3s var(--ease), opacity 0.3s var(--ease), visibility 0s linear 0.3s;
   }
-  .nav.open { transform: translateY(0); }
+  .nav.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    transition: transform 0.3s var(--ease), opacity 0.3s var(--ease), visibility 0s;
+  }
   .nav__link { padding: 14px; }
   .nav__link--cta { margin-left: 0; text-align: center; }
   .nav-toggle { display: flex; }
