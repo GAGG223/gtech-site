@@ -428,6 +428,20 @@ img, svg { display: block; }
 
 .section__desc { color: var(--muted); font-size: 1.06rem; }
 
+/* ===== Ícones SVG (traço branco) ===== */
+.card__icon svg,
+.feature__icon svg,
+.contact__ico svg {
+  width: 28px;
+  height: 28px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.contact__ico svg { width: 22px; height: 22px; }
+
 /* ===== Cards de serviço ===== */
 .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 
@@ -508,12 +522,13 @@ img, svg { display: block; }
   box-shadow: 0 0 0 3px rgba(255, 122, 26, 0.15);
 }
 .card__list li::after {
-  content: "✓";
+  content: "";
   position: absolute;
-  left: 3px; top: 2px;
-  font-size: 0.7rem;
-  color: #fff;
-  font-weight: 700;
+  left: 5px; top: 11px;
+  width: 5px; height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 /* ===== Diferenciais ===== */

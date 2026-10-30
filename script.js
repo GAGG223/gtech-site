@@ -98,7 +98,7 @@
       const texto = encodeURIComponent(linhas.join("\n"));
       const url = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + texto;
 
-      feedback.textContent = "Abrindo o WhatsApp para você enviar a mensagem... 🚀";
+      feedback.textContent = "Abrindo o WhatsApp para você enviar a mensagem...";
       feedback.className = "form__feedback ok";
 
       // Abre o WhatsApp (app ou web) em uma nova aba
